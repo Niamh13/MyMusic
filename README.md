@@ -9,3 +9,5 @@ Data Structures and Algorithms: CA1
 - See a printed list (on screen) of whichever playlists they wish
 - Display how many songs are in each list
 - Create a playlist that can be set to repeat
+
+<img width="484" alt="MyMusicGUI" src="https://github.com/Niamh13/MyMusic/assets/77692255/55f8b004-4aff-4fbd-8390-42e9aa6052e7">
