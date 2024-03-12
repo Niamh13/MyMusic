@@ -10,4 +10,6 @@ Data Structures and Algorithms: CA1
 - Display how many songs are in each list
 - Create a playlist that can be set to repeat
 
-<img width="484" alt="MyMusicGUI" src="https://github.com/Niamh13/MyMusic/assets/77692255/55f8b004-4aff-4fbd-8390-42e9aa6052e7">
+<img width="120%" alt="MyMusicGUI" src="https://github.com/Niamh13/MyMusic/assets/77692255/55f8b004-4aff-4fbd-8390-42e9aa6052e7">
+
+Either 3 separate GUIs or one with over lapping components and change the visibility of each component depending
