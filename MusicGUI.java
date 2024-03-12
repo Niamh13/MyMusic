@@ -2,11 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package algorithm.mymusic;
+package mymusic;
 
 /**
- *
+ * MusicGUI
  * @author niamh
+ * 12/03/24
  */
 public class MusicGUI extends javax.swing.JFrame {
 
@@ -32,8 +33,8 @@ public class MusicGUI extends javax.swing.JFrame {
         bgLB = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(280, 550));
-        setPreferredSize(new java.awt.Dimension(370, 550));
+        setMinimumSize(new java.awt.Dimension(370, 545));
+        setPreferredSize(new java.awt.Dimension(370, 545));
         getContentPane().setLayout(null);
 
         tilteLB.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -61,7 +62,7 @@ public class MusicGUI extends javax.swing.JFrame {
         getContentPane().add(editBTN);
         editBTN.setBounds(100, 210, 130, 40);
 
-        bgLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/algorithm/mymusic/musics.png"))); // NOI18N
+        bgLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mymusic/musics.png"))); // NOI18N
         getContentPane().add(bgLB);
         bgLB.setBounds(0, 0, 360, 510);
 
@@ -107,6 +108,7 @@ public class MusicGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MusicGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
