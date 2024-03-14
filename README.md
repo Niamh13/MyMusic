@@ -13,4 +13,4 @@ Data Structures and Algorithms: CA1
 <img width="120%" alt="MyMusicGUI" src="https://github.com/Niamh13/MyMusic/assets/77692255/55f8b004-4aff-4fbd-8390-42e9aa6052e7">
 
 Either 3 separate GUIs or one with over lapping components and change the visibility of each component depending
-<img width="242" alt="musics" src="https://github.com/Niamh13/MyMusic/assets/77692255/956cdefb-b4de-4c9c-af24-28621161998d">
+
