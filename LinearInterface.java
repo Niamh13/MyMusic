@@ -5,11 +5,10 @@
 package mymusic;
 
 /**
- *
+ * LinearInterface
  * @author niamh
  */
 public interface LinearInterface {
-    
     public boolean isEmpty();
     public int size();
     public Object get(int iIndex);
@@ -19,5 +18,4 @@ public interface LinearInterface {
     public String getItem(int iIndex);
     public void addList(LinearInterface listToAdd);
     public void setCurrent(int inIndex);
-    
 }
