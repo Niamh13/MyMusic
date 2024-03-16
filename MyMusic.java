@@ -15,7 +15,7 @@ public class MyMusic {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        MusicGUI mysong = new MusicGUI();
+        AddGUI mysong = new AddGUI();
         mysong.setVisible(true);
         
     }

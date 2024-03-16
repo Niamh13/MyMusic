@@ -33,26 +33,18 @@ public class DoubleList implements LinearInterface{
     public void add(int inIndex, Object inElement){
         DNode newN = new DNode(inElement, null, null);
         if (iSize == 0) {
-            //insert a new Node when the list is empty
-            // write your code here
             head = newN;
             last = newN;
         } else {
             if (inIndex == 1) {
-                // Insert a new Node at the head position
-                // write your code here
                 newN.setNext(head);
                 head.setPrev(newN);
                 head = newN;
             } else if (inIndex == (iSize + 1)) {
-                // Insert a new Node at the last position
-                // write your code here
                 newN.setPrev(last);
                 last.setNext(newN);
                 last = newN;
             } else {
-                // Insert a new node in the middle
-                // write your code here
                 setCurrent(inIndex);
                 newN.setNext(currNode);
                 DNode prev = currNode.getPrev();
@@ -65,12 +57,13 @@ public class DoubleList implements LinearInterface{
     }
     
     public void remove(int iIndex){
-        if(iSize > 0){
-            if(iIndex == 1){
+        
+        if(iSize > 1){
+            if(iIndex == 0){
                 head = head.getNext();
                 head.setPrev(null);
             }
-            else if(iIndex == iSize){
+            else if(iIndex == (iSize-1)){
                 last = last.getPrev();
                 last.setNext(null);
             }
@@ -84,12 +77,16 @@ public class DoubleList implements LinearInterface{
             currNode = null;
             iSize--;
         }
+        else if(iSize == 1){
+            head = null;
+            iSize--;
+        }
         else{
             System.out.println("List is Empty");
         }
     }
     
-    private void setCurrent(int inIndex){
+    public void setCurrent(int inIndex){
         currNode = head;
         for(int i = 0; i < inIndex; i++){
             currNode = currNode.getNext();
@@ -101,21 +98,33 @@ public class DoubleList implements LinearInterface{
         return currNode;
     }
     
+    
+    public String getItem(int index){
+        setCurrent(index);
+        if(currNode != null){
+            return currNode.getELement().toString();
+        }
+        else{
+            return "empty";
+        }
+    }
+    
+    public void addList(LinearInterface listToAdd){
+      for(int i=0; listToAdd.get(i)!=null;i++){
+        listToAdd.setCurrent(i);
+        this.add(1, listToAdd.getItem(i));
+      }
+    }
+    
     public String printList(){
         String allI = new String();
         for (DNode a = head; a != null; a=a.getNext()){
             String item = (a.getELement()).toString();
             allI = allI + item + ", ";
+            
         }
         return allI;
     }
     
-    public String printListBwd(){
-        String allI = new String();
-        for(DNode a = last; a!= null; a = a.getPrev()){
-            String item = (a.getELement()).toString();
-            allI = allI + item + ", ";
-        }
-        return allI;
-    }
+   
 }
