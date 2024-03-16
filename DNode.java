@@ -5,7 +5,7 @@
 package mymusic;
 
 /**
- *
+ * DNode, for Double linked lists
  * @author niamh
  */
 public class DNode {
