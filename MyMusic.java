@@ -10,11 +10,8 @@ package mymusic;
  * 12/03/2024
  */
 public class MyMusic {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        // sets the GUI and makes it visible
         AddGUI mysong = new AddGUI();
         mysong.setVisible(true);
         
