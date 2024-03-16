@@ -5,7 +5,7 @@
 package mymusic;
 
 /**
- *
+ * DoubleList
  * @author niamh
  */
 public class DoubleList implements LinearInterface{
@@ -30,6 +30,7 @@ public class DoubleList implements LinearInterface{
         return iSize;
     }
     
+    //adding elements to the Double linked list
     public void add(int inIndex, Object inElement){
         DNode newN = new DNode(inElement, null, null);
         if (iSize == 0) {
@@ -56,17 +57,20 @@ public class DoubleList implements LinearInterface{
         iSize++;
     }
     
+    //adding elements to the Double linked list by using the index given
     public void remove(int iIndex){
-        
         if(iSize > 1){
+            // if its the first node
             if(iIndex == 0){
                 head = head.getNext();
                 head.setPrev(null);
             }
+            // if its the last node
             else if(iIndex == (iSize-1)){
                 last = last.getPrev();
                 last.setNext(null);
             }
+            // otherwise it have both a node before and after to set
             else{
                 setCurrent(iIndex); 
                 DNode prev = currNode.getPrev();
@@ -86,6 +90,7 @@ public class DoubleList implements LinearInterface{
         }
     }
     
+    // setting and reseting current Node
     public void setCurrent(int inIndex){
         currNode = head;
         for(int i = 0; i < inIndex; i++){
@@ -93,12 +98,13 @@ public class DoubleList implements LinearInterface{
         }
     }
     
+    // to get the Object at that index
     public Object get(int iIndex){
         setCurrent(iIndex);
         return currNode;
     }
     
-    
+    // to return the String of the element at the index
     public String getItem(int index){
         setCurrent(index);
         if(currNode != null){
@@ -109,6 +115,7 @@ public class DoubleList implements LinearInterface{
         }
     }
     
+    // repeats the list by adding one on the the end of the Double linked list
     public void addList(LinearInterface listToAdd){
       for(int i=0; listToAdd.get(i)!=null;i++){
         listToAdd.setCurrent(i);
@@ -116,6 +123,7 @@ public class DoubleList implements LinearInterface{
       }
     }
     
+    // printing out the list by taking the element at each index and adding them to a string
     public String printList(){
         String allI = new String();
         for (DNode a = head; a != null; a=a.getNext()){
