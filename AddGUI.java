@@ -309,7 +309,7 @@ public class AddGUI extends javax.swing.JFrame {
             System.out.println("Pick genre:");
         }
         
-        nameTF.setText("");
+        //nameTF.setText("");
         
     }                                      
     
@@ -346,7 +346,7 @@ public class AddGUI extends javax.swing.JFrame {
             delete(name, popL);
         }
         
-        nameTF.setText("");
+        //nameTF.setText("");
     }                                         
 
     private void nameTFActionPerformed(java.awt.event.ActionEvent evt) {                                       
@@ -384,7 +384,7 @@ public class AddGUI extends javax.swing.JFrame {
         else{
             JOptionPane.showMessageDialog(null, "Choose a genre");
         }
-        nameTF.setText("");
+        //nameTF.setText("");
         
     }                                         
     
@@ -413,7 +413,7 @@ public class AddGUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Choose a genre");
         }
         
-        nameTF.setText("");
+        //nameTF.setText("");
         
     }                                       
 
